@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+    background-color: #E2EBF4;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 250px;
+    z-index: 2;
+}
+.wave-front-container {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+.wave-back-container {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.wave {
+    width: 100vw;
+}
+.clouds {
+    z-index: 1;
+    width: 100vw;
+    position: absolute;
+    top: -30px;
+}
+.sun {
+    position: absolute;
+    right: -300px;
+    top: -300px;
+    height: 700px;
+    width: 700px;
+    background-color: #f8d78a;
+    border-radius: 50%;
+    z-index: 2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media only screen and (min-width: 1500px) {
+    .wave-front-container {
+        bottom: -100px;
+    }
+    .wave-back-container {
+        bottom: -100px;
+    }
+    .clouds {
+        top: -200px;
+    }
+}
+@media only screen and (min-width: 2500px) {
+    .wave-front-container {
+        bottom: -250px;
+    }
+    .wave-back-container {
+        bottom: -250px;
+    }
+    .clouds {
+        top: -250px;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 120px;
+    }
+    .sun {
+        position: absolute;
+        right: -225px;
+        top: -225px;
+        height: 450px;
+        width: 450px;
+        background-color: #f8d78a;
+        border-radius: 50%;
+        z-index: 2;
+    }
 }

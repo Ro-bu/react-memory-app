@@ -3,8 +3,8 @@ import React from "react";
 function HelpModal(props) {
 
     return (
-        <div className={props.modalOpen ? "modal-container" : "modal-container hidden"}>
-            <div className="modal opened">
+        <div className={props.modalOpen ? "modal-container" : "modal-container hidden"} onClick={() => props.openCloseModal()}>
+            <div className="modal opened" onClick={e => e.stopPropagation()}>
                 <div onClick={() => {
                     props.openCloseModal()
                 }} className="close-modal">X</div>

@@ -65,11 +65,23 @@ table {
     position: absolute;
     bottom: 0;
     z-index: 2;
+    left: -100vw;
+    animation: moveright 0.5s forwards;
+    animation-delay: 1.2s;
 }
 .wave-back-container {
     position: absolute;
     bottom: 0;
     z-index: 1;
+    right: -100vw;
+    animation: moveleft 0.5s forwards;
+    animation-delay: 0.7s;
+}
+@keyframes moveleft {
+    100% { right: 0;}
+}
+@keyframes moveright {
+    100% { left: 0;}
 }
 .wave {
     width: 100vw;
@@ -78,17 +90,28 @@ table {
     z-index: 1;
     width: 100vw;
     position: absolute;
-    top: -30px;
+    /* top: -30px; */
+    top: -300px;
+    animation: dropdown 0.5s forwards;
+    animation-delay: 0.2s;
+}
+@keyframes dropdown {
+    100% {top: -30px;}
 }
 .sun {
     position: absolute;
-    right: -300px;
-    top: -300px;
+    right: -700px;
+    top: -700px;
     height: 700px;
     width: 700px;
     background-color: #f8d78a;
     border-radius: 50%;
     z-index: 2;
+    animation: movesun 1s forwards;
+    animation-delay: 1.7s;
+}
+@keyframes movesun {
+    100% {top: -350px; right: -350px;}
 }
 
 @media only screen and (min-width: 1500px) {
@@ -99,7 +122,10 @@ table {
         bottom: -100px;
     }
     .clouds {
-        top: -200px;
+        top: -500px;
+    }
+    @keyframes dropdown {
+        100% {top: -200px;}
     }
 }
 @media only screen and (min-width: 2500px) {
@@ -110,7 +136,10 @@ table {
         bottom: -250px;
     }
     .clouds {
-        top: -250px;
+        top: -800px;
+    }
+    @keyframes dropdown {
+        100% {top: -300px;}
     }
 }
 
@@ -120,12 +149,15 @@ table {
     }
     .sun {
         position: absolute;
-        right: -225px;
-        top: -225px;
+        right: -450px;
+        top: -450px;
         height: 450px;
         width: 450px;
         background-color: #f8d78a;
         border-radius: 50%;
         z-index: 2;
+    }
+    @keyframes movesun {
+        100% {top: -225px; right: -225px;}
     }
 }

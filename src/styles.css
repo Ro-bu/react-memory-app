@@ -215,6 +215,7 @@ body {
     background-color:#fffcec;
     box-sizing: border-box;
     padding: 20px 20px;
+    margin: 0 10px;
 }
 .modal-title {
     font-size: 1.2rem;
@@ -237,7 +238,20 @@ body {
     font-weight: 700;
     font-size: 1.2rem;
 }
-
+.hidden {
+    display: none;
+}
+.opened {
+    animation: modalopen 0.5s forwards;
+}
+@keyframes modalopen {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 
 

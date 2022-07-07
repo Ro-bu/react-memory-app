@@ -8,16 +8,20 @@ import {GameGrid} from "./components/GameGrid";
 import {HelpModal} from "./components/HelpModal";
 
 function App() {
+  const [modalOpen, setModalOpen] = React.useState(false)
+  function openCloseModal() {
+    setModalOpen((prev) => !prev);
+  }
   return (
     <div className="main-container">
-      <HelpModal />
+      <HelpModal modalOpen={modalOpen} openCloseModal={openCloseModal}  />
       <div className="sun">
         <ScoreBoard />
       </div>
       <img className="clouds" alt="cloud sprite" src={clouds} />
       <div className="logo-container">
         <img className="logo" alt="animal memory logo" src={logo} />
-        <div className="help-button" >?</div>
+        <div onClick={openCloseModal} className="help-button" >?</div>
       </div>
       <div className="wave-front-container">
         <img className="wave" alt="wave-sprite" src={waveFront} />

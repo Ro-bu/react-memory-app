@@ -62,11 +62,14 @@ body {
     overflow: hidden;
 }
 .logo {
+    width: 250px;
+}
+.logo-container {
     position: absolute;
     top: 15px;
     left: 15px;
-    width: 250px;
     z-index: 2;
+    display: flex;
 }
 .wave-front-container {
     position: absolute;
@@ -114,7 +117,7 @@ body {
     background-color: #f8d78a;
     border-radius: 50%;
     z-index: 2;
-    animation: movesun 1s forwards;
+    animation: movesun 0.5s forwards;
     animation-delay: 1.7s;
     display: flex;
     justify-content: flex-start;
@@ -173,6 +176,32 @@ body {
 .tile-image {
     width: 150px;
 }
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.help-button {
+    height: 30px;
+    width: 30px;
+    border: 4px solid #513728;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #513728;
+    font-weight: 800;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.modal {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    display: none;
+}
+
+
 
 
 @media only screen and (min-width: 1500px) {
@@ -253,6 +282,17 @@ body {
         background-color: #f8d78a;
         border-radius: 50%;
         z-index: 2;
+    }
+    .help-button {
+        height: 20px;
+        width: 20px;
+        font-size: 16px;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+    .logo-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
     @keyframes movesun {
         100% {top: -225px; right: -225px;}

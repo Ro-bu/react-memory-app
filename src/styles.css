@@ -141,12 +141,37 @@ body {
 .score-container span {
     font-size: 2.1rem;
 }
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .gamegrid {
     z-index: 3;
     position: relative;
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px;
+    grid-template-rows: 180px 180px;
+    gap: 2rem;
+    align-content: center;
+}
+.gametile {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffef9;
+    border: 0.4rem solid #DFCCA1;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.2s 0s ease;
+}
+.gametile:hover {
+    transform: scale(1.05);
 }
 .tile-image {
-    width: 200px;
+    width: 150px;
 }
 
 
@@ -163,6 +188,17 @@ body {
     @keyframes dropdown {
         100% {top: -200px;}
     }
+    .gametile {
+        width: 250px;
+        height: 250px;
+    }
+    .tile-image {
+        width: 200px;
+    }
+    .gamegrid {
+        grid-template-columns: 250px 250px 250px 250px;
+        grid-template-rows: 250px 250px;
+    }
 }
 @media only screen and (min-width: 2500px) {
     .wave-front-container {
@@ -178,13 +214,32 @@ body {
         100% {top: -300px;}
     }
 }
-
+@media only screen and (max-width: 900px) {
+    .gamegrid {
+        grid-template-columns: 120px 120px;
+        grid-template-rows: 120px 120px 120px 120px;
+        gap: 3rem;
+    }
+    .gametile {
+        width: 120px;
+        height: 120px;
+    }
+    .tile-image {
+        width: 100px;
+    }
+}
+@media only screen and (max-height: 770px) {
+    .gamegrid {
+        gap: 1.5rem;
+        margin-top: 100px;
+    }
+}
 @media only screen and (max-width: 600px) {
     html {
         font-size: 10px;
     }
     .scoreboard {
-        margin-top: 260px;
+        margin-top: 250px;
     }
     .logo {
         width: 120px;

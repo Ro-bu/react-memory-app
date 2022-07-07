@@ -46,6 +46,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #281A19;
+}
 
 .main-container {
     background-color: #E2EBF4;
@@ -109,10 +116,39 @@ table {
     z-index: 2;
     animation: movesun 1s forwards;
     animation-delay: 1.7s;
+    display: flex;
+    justify-content: flex-start;
 }
 @keyframes movesun {
     100% {top: -350px; right: -350px;}
 }
+.scoreboard {
+    margin-top: 405px;
+    margin-left: 4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.score-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+.score-container span {
+    font-size: 2.1rem;
+}
+.gamegrid {
+    z-index: 3;
+    position: relative;
+}
+.tile-image {
+    width: 200px;
+}
+
 
 @media only screen and (min-width: 1500px) {
     .wave-front-container {
@@ -144,6 +180,12 @@ table {
 }
 
 @media only screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+    .scoreboard {
+        margin-top: 260px;
+    }
     .logo {
         width: 120px;
     }

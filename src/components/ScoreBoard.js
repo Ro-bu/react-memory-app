@@ -1,16 +1,16 @@
 import React from "react";
 
-function ScoreBoard () {
+function ScoreBoard (props) {
 
     return (
         <div className="scoreboard">
             <div className="score-container">
                 <p>Current Score:</p>
-                <span>0</span>
+                <span>{props.currentScore}</span>
             </div>
             <div className="score-container">
                 <p>High Score:</p>
-                <span>0</span>
+                <span>{props.highScore}</span>
             </div>
         </div>
     )

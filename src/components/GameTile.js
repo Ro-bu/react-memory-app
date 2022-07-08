@@ -3,7 +3,7 @@ import React from "react";
 function GameTile(props) {
 
     return (
-        <div className="gametile">
+        <div onClick={() => props.submitAnswer(props.id)} className="gametile">
             <img className="tile-image" src={props.src} />
         </div>
     )

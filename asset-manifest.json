@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-memory-app/static/css/main.0a0f081c.css",
+    "main.css": "/react-memory-app/static/css/main.0c55e6f9.css",
     "main.js": "/react-memory-app/static/js/main.645b5a83.js",
     "static/media/logo.png": "/react-memory-app/static/media/logo.fd998aa93e86d7c9c553.png",
     "static/media/rabbit.png": "/react-memory-app/static/media/rabbit.9ad30f4357757040a44a.png",
@@ -15,11 +15,11 @@
     "index.html": "/react-memory-app/index.html",
     "static/media/wave-back.svg": "/react-memory-app/static/media/wave-back.dc07e831ae93514aadd4f3b37fec8461.svg",
     "static/media/wave-front.svg": "/react-memory-app/static/media/wave-front.f5cd1d688d60aae2bcc6a6adf7c7d3cb.svg",
-    "main.0a0f081c.css.map": "/react-memory-app/static/css/main.0a0f081c.css.map",
+    "main.0c55e6f9.css.map": "/react-memory-app/static/css/main.0c55e6f9.css.map",
     "main.645b5a83.js.map": "/react-memory-app/static/js/main.645b5a83.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a0f081c.css",
+    "static/css/main.0c55e6f9.css",
     "static/js/main.645b5a83.js"
   ]
 }

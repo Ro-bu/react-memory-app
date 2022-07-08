@@ -72,12 +72,6 @@ function App() {
       setAnswerArray([]);
     }
   }
-  // function checkForHighScore() {
-  //   if(currentScore > highScore) {
-  //     setHighScore(currentScore);
-  //   }
-  // }
-
 
   return (
     <div className="main-container">
@@ -85,16 +79,16 @@ function App() {
       <div className="sun">
         <ScoreBoard score={score} />
       </div>
-      <img className="clouds" alt="cloud sprite" src={clouds} />
+      <img draggable="false" className="clouds" alt="cloud sprite" src={clouds} />
       <div className="logo-container">
-        <img className="logo" alt="animal memory logo" src={logo} />
+        <img draggable="false" className="logo" alt="animal memory logo" src={logo} />
         <div onClick={openCloseModal} className="help-button" >?</div>
       </div>
       <div className="wave-front-container">
-        <img className="wave" alt="wave-sprite" src={waveFront} />
+        <img draggable="false" className="wave" alt="wave-sprite" src={waveFront} />
       </div>
       <div className="wave-back-container">
-        <img className="wave" alt="wave-sprite" src={waveBack} />
+        <img draggable="false" className="wave" alt="wave-sprite" src={waveBack} />
       </div>
       <GameGrid submitAnswer={submitAnswer} data={tileData} />
     </div>

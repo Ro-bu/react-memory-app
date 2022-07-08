@@ -4,7 +4,7 @@ function GameTile(props) {
 
     return (
         <div onClick={() => props.submitAnswer(props.id)} className="gametile">
-            <img className="tile-image" src={props.src} />
+            <img draggable="false" className="tile-image" src={props.src} />
         </div>
     )
 }

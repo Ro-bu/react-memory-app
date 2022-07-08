@@ -52,6 +52,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     color: #281A19;
+    user-select: none;
 }
 
 .main-container {

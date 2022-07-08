@@ -6,11 +6,11 @@ function ScoreBoard (props) {
         <div className="scoreboard">
             <div className="score-container">
                 <p>Current Score:</p>
-                <span>{props.currentScore}</span>
+                <span>{props.score.currentScore}</span>
             </div>
             <div className="score-container">
                 <p>High Score:</p>
-                <span>{props.highScore}</span>
+                <span>{props.score.highScore}</span>
             </div>
         </div>
     )

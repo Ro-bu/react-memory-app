@@ -10,9 +10,9 @@ import {data} from "./components/data";
 
 function App() {
   const [modalOpen, setModalOpen] = React.useState(false);
-  const [currentScore, setCurrentScore] = React.useState(0);
-  const [highScore, setHighScore] = React.useState(0);
+  const [score, setScore] = React.useState({currentScore: 0, highScore: 0});
   const [answerArray, setAnswerArray] = React.useState([]);
+  const [tileData, setTileData] = React.useState([]);
 
   // Fisher-Yates array shuffle
   function shuffle(array) {
@@ -25,19 +25,35 @@ function App() {
     }
     return array;
   }
-  let tileElements = data;
+
 
   function shuffleTiles() {
-    tileElements = shuffle(data);
+    setTileData([...shuffle(data)])
   };
 
   React.useEffect(() => {
     shuffleTiles()
-    checkForHighScore();
-  }, [currentScore]);
+  }, [score]);
 
   function openCloseModal() {
     setModalOpen((prev) => !prev);
+  }
+  function addScore() {
+    if(score.currentScore + 1 > score.highScore) {
+      setScore(prev => {
+        return ({
+          currentScore: prev.currentScore+1,
+          highScore: prev.currentScore+1
+        })
+      })
+    } else {
+      setScore(prev => {
+        return({
+          ...prev,
+          currentScore: prev.currentScore+1
+        })
+      })
+    }
   }
 
   function submitAnswer(ans) {
@@ -45,25 +61,29 @@ function App() {
       setAnswerArray((prev) => {
         return [...prev, ans];
       })
-      setCurrentScore((prev) => prev + 1);
+      addScore();
     } else {
-      setCurrentScore(0);
+      setScore(prev => {
+        return({
+          ...prev,
+          currentScore: 0
+        })
+      })
       setAnswerArray([]);
     }
-    console.log(answerArray)
   }
-  function checkForHighScore() {
-    if(currentScore > highScore) {
-      setHighScore(currentScore);
-    }
-  }
+  // function checkForHighScore() {
+  //   if(currentScore > highScore) {
+  //     setHighScore(currentScore);
+  //   }
+  // }
 
 
   return (
     <div className="main-container">
       <HelpModal modalOpen={modalOpen} openCloseModal={openCloseModal}  />
       <div className="sun">
-        <ScoreBoard currentScore={currentScore} highScore={highScore} />
+        <ScoreBoard score={score} />
       </div>
       <img className="clouds" alt="cloud sprite" src={clouds} />
       <div className="logo-container">
@@ -76,7 +96,7 @@ function App() {
       <div className="wave-back-container">
         <img className="wave" alt="wave-sprite" src={waveBack} />
       </div>
-      <GameGrid submitAnswer={submitAnswer} data={tileElements} />
+      <GameGrid submitAnswer={submitAnswer} data={tileData} />
     </div>
   );
 }

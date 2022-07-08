@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-memory-app/static/css/main.0a0f081c.css",
+    "main.js": "/react-memory-app/static/js/main.645b5a83.js",
+    "static/media/logo.png": "/react-memory-app/static/media/logo.fd998aa93e86d7c9c553.png",
+    "static/media/rabbit.png": "/react-memory-app/static/media/rabbit.9ad30f4357757040a44a.png",
+    "static/media/bear.png": "/react-memory-app/static/media/bear.5f2a9f13b4cecc2112ad.png",
+    "static/media/tiger.png": "/react-memory-app/static/media/tiger.ca6720ff103229d4b315.png",
+    "static/media/horse.png": "/react-memory-app/static/media/horse.b524c457b5bffe5c0f43.png",
+    "static/media/crocodile.png": "/react-memory-app/static/media/crocodile.05bc88591eafc99664e3.png",
+    "static/media/cow.png": "/react-memory-app/static/media/cow.e1e9e9cf3b85a2e667dc.png",
+    "static/media/rhinoceros.png": "/react-memory-app/static/media/rhinoceros.cb7559b811aef1d8e7c5.png",
+    "static/media/fox.png": "/react-memory-app/static/media/fox.6efae7f8ba5fadc05e49.png",
+    "static/media/clouds1.svg": "/react-memory-app/static/media/clouds1.377876948bfe14932c09eeb377a63c2a.svg",
+    "index.html": "/react-memory-app/index.html",
+    "static/media/wave-back.svg": "/react-memory-app/static/media/wave-back.dc07e831ae93514aadd4f3b37fec8461.svg",
+    "static/media/wave-front.svg": "/react-memory-app/static/media/wave-front.f5cd1d688d60aae2bcc6a6adf7c7d3cb.svg",
+    "main.0a0f081c.css.map": "/react-memory-app/static/css/main.0a0f081c.css.map",
+    "main.645b5a83.js.map": "/react-memory-app/static/js/main.645b5a83.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a0f081c.css",
+    "static/js/main.645b5a83.js"
+  ]
+}

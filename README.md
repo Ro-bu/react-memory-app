@@ -8,7 +8,7 @@ Solo project from [The Odin Project's](https://theodinproject.com/) curriculum t
 
 ```
 git clone https://github.com/Ro-bu/react-memory-app.git
-cd shopping-cart
+cd react-memory-app
 npm install
 npm start
 ```

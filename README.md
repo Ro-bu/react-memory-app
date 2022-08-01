@@ -1,6 +1,6 @@
 # react-quiz
 
-:point-right: [Live Link](https://ro-bu.github.io/react-memory-app/)
+:point_right: [Live Link](https://ro-bu.github.io/react-memory-app/)
 
 Solo project from [The Odin Project's](https://theodinproject.com/) curriculum to create a memory card game.
 
@@ -21,6 +21,8 @@ Beyond that, other learning outcomes were:
 
 - Implement css animations and transitions
 - Further comprehension of state management
+
+## Screenshots
 
 ## Development
 
